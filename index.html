@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-img">
+      <div class="container">
+        <nav class="navbar">
+          <div class="topnav" id="myTopnav">
+            <a href="#contact">Contact</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#home" class="active">Home</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <div class="centre">
+            <h2>HELLO I AM</h2>
+            <h1>ANIKET NEGI</h1>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div id="about" class="about-section">
+      <h2>About</h2>
+      <p>Some text about who we are and what we do.</p>
+      <p>
+        Resize the browser window to see that this page is responsive by the
+        way.
+      </p>
+    </div>
+
+    <div id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <div class="card">ONE</div>
+        <div class="card">TWO</div>
+        <div class="card">THREE</div>
+        <div class="card">FOUR</div>
+        <div class="card">FIVE</div>
+        <div class="card">SIX</div>
+      </div>
+    </div>
+
+    <div id="contact">
+      <h2>Contact</h2>
+      <div class="contactform">
+        <form action="action_page.php">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+          />
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style="height: 200px"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+
+      //Get the button:
+      mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+  </body>
+</html>
